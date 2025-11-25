@@ -1,0 +1,17 @@
+    1  git clone https://github.com/RomaneMo/devsecops-lab.git
+    2  cd devsecops-lab
+    3  mkdir -p src .github/workflows
+    4  mkdir src
+    5  cd src
+    6  nano package.json
+    7  ls
+    8  nano server.js
+    9  ls
+   10  nano Dockerfile
+   11  cd ..
+   12  mkdir .github\workflows
+   13  ni .github\workflows\security.yml
+   14  ls
+   15  ls -p
+   16  ls -l
+   17  history > romane2.txt
