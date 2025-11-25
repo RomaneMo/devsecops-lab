@@ -50,6 +50,12 @@ res.status(401).json({ error: 'Invalid credentials' });
 app.get('/health', (req, res) => {
 res.json({ status: 'OK' });
 });
+// Endpoint vulnérable à l'injection SQL
+app.get('/user', (req, res) => {
+  const username = req.query.username;
+  const query = `SELECT * FROM users WHERE username = '${username}'`;
+  res.json({ sql: query });
+});
 // Pas d'endpoint de debug en production
 if (process.env.NODE_ENV !== 'production') {
 app.get('/debug', (req, res) => {
